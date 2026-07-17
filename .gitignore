@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Build
+build/
+dist/
+
+# Logs
+*.log
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Temporary
+tmp/
+temp/
+.cache/

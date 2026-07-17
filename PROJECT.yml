@@ -1,0 +1,25 @@
+schema_version: 1
+
+project:
+  name: "{{PROJECT_NAME}}"
+  slug: "{{PROJECT_SLUG}}"
+  description: "{{PROJECT_DESCRIPTION}}"
+  type: "{{PROJECT_TYPE}}"
+  version: 0.1.0
+  status: active
+
+organization:
+  name: IncusLuminis
+
+repository:
+  visibility: "{{VISIBILITY}}"
+  default_branch: main
+  template: true
+
+license:
+  id: MIT
+
+storage:
+  code: github
+  content: github
+  media: external
