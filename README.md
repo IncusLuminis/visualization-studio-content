@@ -1,6 +1,6 @@
-# {{PROJECT_NAME}}
+# visualization-studio-content
 
-> {{PROJECT_DESCRIPTION}}
+> Sample projects, templates and demonstration assets for Visualization Studio.
 
 ---
 

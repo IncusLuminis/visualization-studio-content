@@ -1,10 +1,10 @@
 schema_version: 1
 
 project:
-  name: "{{PROJECT_NAME}}"
-  slug: "{{PROJECT_SLUG}}"
-  description: "{{PROJECT_DESCRIPTION}}"
-  type: "{{PROJECT_TYPE}}"
+  name: "visualization-studio-content"
+  slug: "visualization-studio-content"
+  description: "Sample projects, templates and demonstration assets for Visualization Studio."
+  type: "content"
   version: 0.1.0
   status: active
 
@@ -12,7 +12,7 @@ organization:
   name: IncusLuminis
 
 repository:
-  visibility: "{{VISIBILITY}}"
+  visibility: "public"
   default_branch: main
   template: true
 
