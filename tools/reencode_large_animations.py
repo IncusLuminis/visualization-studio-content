@@ -199,11 +199,12 @@ def exec_cell(nb_path: Path, needle: str, cwd: Path) -> None:
 
 
 def main() -> int:
-    # Telemetry moved to IncusLuminis (products/visualization-studio/visualization-studio-content);
-    # Nebulacast has NOT moved and still lives at its original PycharmProjects location. This is
-    # hardcoded (rather than derived via parents[]) because that relative relationship no longer
-    # holds now that the two projects live under different roots.
-    repo = Path("/Users/mloktionov/PycharmProjects/Stellar_Attractor/ANIM")
+    # Telemetry moved to IncusLuminis (products/visualization-studio/visualization-studio-content).
+    # Nebulacast has since ALSO moved (was PycharmProjects/Stellar_Attractor/ANIM/Nebulacast, now
+    # products/nebulacast/nebulacast-content/content/my/) — updated here to match. Hardcoded
+    # (rather than derived via parents[]) since the two projects live under unrelated roots and
+    # there's no stable relative path between them.
+    repo = Path("/Users/mloktionov/Projects/IncusLuminis/products/nebulacast/nebulacast-content/content")
 
     NOTEBOOKS = ROOT / "notebooks"
 
@@ -217,7 +218,7 @@ def main() -> int:
     patch_output_format(NOTEBOOKS / "Telemetry_9.ipynb", 'ANIMATION_NAME = "math_hopf_fibration_rotation"', "mp4")
     patch_output_format(NOTEBOOKS / "Telemetry_9.ipynb", 'ANIMATION_NAME = "math_magnetar_field_hud"', "mp4")
 
-    repo_nb = repo / "Nebulacast"
+    repo_nb = repo / "my"  # Nebulacast's content now lives in content/my/, not a "Nebulacast" folder
     patch_nebulacast_gif_cell(repo_nb / "Exoplanets.ipynb", "exoplanet_signal_in_white_noise.gif", "exoplanets")
     patch_nebulacast_gif_cell(repo_nb / "Exoplanets.ipynb", "exoplanet_2d_coronagraph_physical_noise.gif", "exoplanets")
     patch_nebulacast_gif_cell(repo_nb / "Enceladus.ipynb", "tidal_interaction_galaxy_demo.gif", "tidal_interaction")

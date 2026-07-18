@@ -13,12 +13,11 @@ ANIM = ROOT / "media-site" / "animations"
 # Telemetry's own notebooks now live here (moved to IncusLuminis).
 NOTEBOOKS_DIR = ROOT / "notebooks"
 
-# Nebulacast has NOT moved — it's a separate project, still at its original
-# PycharmProjects location. Hardcoded (not derived via parents[]) because that
-# relative relationship no longer holds now that Telemetry lives elsewhere.
-# Scanning both roots keeps this script finding notebook sources on both sides,
-# same as before the move (a single REPO root can no longer reach both).
-NEBULACAST_ROOT = Path("/Users/mloktionov/PycharmProjects/Stellar_Attractor/ANIM")
+# Nebulacast is a separate project — was PycharmProjects/Stellar_Attractor/ANIM/Nebulacast,
+# now products/nebulacast/nebulacast-content/content/my/. Hardcoded (not derived via
+# parents[]) since there's no stable relative path between the two projects' roots.
+# Scanning both roots keeps this script finding notebook sources on both sides.
+NEBULACAST_ROOT = Path("/Users/mloktionov/Projects/IncusLuminis/products/nebulacast/nebulacast-content/content/my")
 
 SEARCH_ROOTS = [NOTEBOOKS_DIR, NEBULACAST_ROOT]
 
