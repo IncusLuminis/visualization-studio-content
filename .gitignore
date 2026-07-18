@@ -31,3 +31,7 @@ dist/
 tmp/
 temp/
 .cache/
+
+# Media (heavy, non-diffable) — lives on the CDN (media-math.pages.dev), not in git.
+# Deployed via scripts/deploy_media_site.sh.
+media-site/
